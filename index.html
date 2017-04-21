@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>سيشا | المعرفة مفتوحة المصدر </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="mystyles.css"rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/droid-arabic-kufi" type="text/css"/>
+    
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawMultSeries);
+      function drawMultSeries() {
+          var data = google.visualization.arrayToDataTable([
+            ['المكان', 'التسجيل', 'الحضور'],
+            ['Mansoura', 70, 20],
+            ['Kafr El-Shiekh', 65, 18],
+            ['Alexandria', 80, 12],
+            ['Zagazig', 38, 10],
+          ]);
+
+          var options = {
+            title: 'Hour of Code',
+            chartArea: {width: '50%'},
+            hAxis: {
+              title: 'العدد',
+              minValue: 0
+            },
+            vAxis: {
+              title: 'المكان'
+            }
+          };
+
+          var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container"> 
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-links" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand">       
+                  <a href="https://www.youtube.com/channel/UCZtH-W0pLbkTI0q0JEctWHg"><i class="fa fa-youtube you"></i></a>
+                  <a href="#"><i class="fa fa-linkedin lin"></i></a>
+                  <a href="#"><i class="fa fa-twitter tw"></i></a>
+                  <a href="https://www.facebook.com/sesha.initiative/?ref=bookmarks"><i class="fa fa-facebook fb"></i></a>           
+            </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="nav-links collapse navbar-collapse" id="nav-links">  
+                <ul class="nav navbar-nav nav-tabs navbar-right">
+                    <li class="active"><a href="#home" data-toggle = "tab"><span class="fa fa-home" aria-hidden="true"></span> الرئيسية</a></li>
+                    <li><a href = "#who-us" data-toggle = "tab"><i class="fa fa-info-circle" aria-hidden="true"></i>عن سيشا</a></li>
+                    <li class="eng"><a href="#hour" data-toggle = "tab"><span class="fa fa-clock-o" aria-hidden="true"></span> Hour Of Code</a></li>
+                    <li><a href="#next" data-toggle = "tab"><span class="fa fa-calendar" aria-hidden="true"></span> جديد الأخبار</a></li>
+                    <li><a href = "#members" data-toggle = "tab"><i class="fa fa-user" aria-hidden="true"></i>القائمون</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    
+    <!-- SRART tabs -->
+    <div class="tab-content" id = "myTabContent" >   
+        <!-- START Home -->
+        <div class = "container tab-pane fade in active" id="home">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="Sesha logo" class="img-responsive" />
+            </div>
+            <div class="well well-lg">
+
+	            <p>
+	            		سيشا <small>-وهو تحوير لاسم المعبودة الفرعونية <a href="http://www.ancientegyptonline.co.uk/seshat.html">"سيشات"</a> إلهة المعرفة والكتابة-</small>  هي مبادرة تعليمية بدأت فكرتها في عام 2014 حين رأينا الفجوة بين محتوى النظام التعليمي وبين محتوى العلوم والمعارف المختلفة المطروحة على الإنترنت.
+	         
+	            		فعزمنا أن تكون "سيشا" هي منصة تستضيف المبادرات التعليمية في مختلف المجالات العلمية والمعارف العامة. وخلُصنا إلى أن الإستفادة القصوى قد يحصل عليها غير المتخصص عندما يساهم كل متخصص أو قارئ بتيسير جزء بسيط مما يدرس. لنحصل في النهاية على كيان علمي -ناطق بالعربية- يتم فيه تداول المعرفة بين المتخصصين وغير المتخصصين.
+	            </p>
+            </div>
+        </div>
+         <!-- END Home -->
+        
+        <!-- START who-us section -->
+        <div class = "tab-pane fade" id="who-us">
+             <section class="features text-center">
+                 <div class="container">
+                 	<h1>لماذا بدأنا؟</h1>
+                    <div class="row ">
+                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4">
+                            <div class="feat"> 
+                                <i class="fa fa-desktop fa-3x"></i>
+                                <h3>الثقة في التكنولوجيا</h3>
+                                <P class="lead">تمثل التكنولوجيا عنصر أساسي في تسهيل العديد من النشاطات البشرية.وينقصنا في مجتمعاتنا أن نعتمد عليها بشكل كافي في تحصيل المعارف العامة. تهدف سيشا لتمهيد الطريق للاعتماد على التكنولوجيا بشكل أكبر في هذا الغرض.</P>
+                            </div>
+                        </div>
+                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-4">
+                            <div class="feat">
+                                <i class="fa fa-clock-o fa-3x"></i>
+                                <h3>توفير الوقت والمجهود</h3>
+                                <P class="lead">الاستفادة القصوى قد نحصلها كهواة لجمع المعرفة عندما نحصل على المعرفة من متخصص أو من مطالع ذو معرفة جيدة. فرأينا أن توفير وسيلة لتداول المعرفة من المتخصصين لغير المتخصصين في مجالات عديدة قد يساهم في توفير الوقت والجهد لكل فرد.</P>
+                            </div>
+                        </div>
+                        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0">
+                            <div class="feat">
+                                <i class="fa fa-book fa-3x"></i>
+                                <h3>قصور المعارف العامة</h3>
+                                <P class="lead">الهدف الحالي من مبادرة سيشا هو توفير مكان يتبادل فيه المتخصصون وغير المتخصصين المعرفة في مختلف المجالات، تداول المعرفة هذا يساعد على تكوين طبقة جيدة من الوعي بمبادئ المعارف العامة التي تساعدنا جميعاً على خوض حياة أكثر سعادة وقيمة. </P>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </section>
+            <section class="about-us-style text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="head-div">
+                            <span class="head-span">رؤيتنا</span>
+                        </div>
+                        <div class="container-fluid ">
+                            <p class="lead">العلم والمعرفة هما حتى الآن أكفأ الأسلحة البشرية في مجابهة الشرور والعواصف التي طالما فتكت بالإنسان العاقل على مر العصور. ومجتمع بلا قيمة علمية حقيقية معمول بها، لا يمكنه الصمود والقتال. ولا يخفى علينا أن الحصيلة المعرفية لمرتادي التعليم العام في مجتمعاتنا تؤول إلى نتائج غير سارة. حيث لا فائدة للمعرفة العلمية إذا لم يكن لدينا القدرة على استخدامها وتطويعها في حيواتنا اليومية. لابد من فهم جيد لكيفية تأثير تلك المعارف والعلوم علينا بشكل مباشر حتى نقدر على خلق قرارات صائبة تعود علينا بحيوات أكثر نفعاً. وفي عصر انفجار المعلومات، لم يعد هنالك شكلاً تقليدياً لإستسقاء المعرفة. فأنت بضغطة زر يمكنك السفر عبر العصور والأزمان والإطلاع على علوم القدامى والمحدثين. لذلك، نهدف في مبادرتنا إلى خلق هذا الكيان المعرفي المناسب لتداول المعرفة فيما بيننا في جميع العلوم والمعارف. ويجب التذكير بأن الدور التنظيمي الذي نقوم به حالياً لا يمكنه وحده خلق التغيير، بينما يمكن لنا جميعاً أن نخلق هذا التغيير في أنفسنا ومجتمعاتنا حين يساهم الجميع بإيجابية في ذلك الهدف المنشود. 
+<blockquote>
+  <p style="text-align:center;">المعرفة هي القوة.</p>
+  <footer>فيلسوف العلم <cite title="Source Title">فرانسيس بيكون</cite></footer>
+</blockquote>
+
+ولأن الوصول للهدف ليس مقصوراً على زاوية واحدة، نحاول قدر الإمكان تنويع الأفكار والمشاريع التي نكرّس لها الوقت والجهود. وفيما يلي نبذة عمّا يمكن أن يصل بنا إلى تلك الضفة. 								
+			    </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--start section projects-->
+            <section class="projects text-center">
+                <div class="container">
+                    <div class="row ">
+                        <!--start project 1-->
+                        <div class=" col-lg-6 col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
+                            <div class="proj">
+                                <div class="proj-out">
+                                    <div class="proj-content">
+                                        <h3>5 معرفة</h3>
+                                        <p class="lead">خمسة معرفة هو مشروع يهدف لإنتاج فيديوهات قصيرة ومركّزة تتناول مفهوم أو فكرة محددة عن طريق متخصص أو مُطالع. يتكون المشروع من عدة محاور:</p>
+                                        <ul class="pro-list">
+                                            <li><i class="fa fa-check-circle fa-1x"></i> إعداد المحتوى العلمي</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> مراجعة وتأكيد المحتوى</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> تصوير وتعديل المحتوى المرئي</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> تقديم المحتوى العلمي ونشره</li>
+                                        </ul>
+                                    </div>
+                                    <div class="pro-btns">
+                                        <a href="#" class="btn btn-primary">انضم الان</a> 
+                                        <button id="new-modal1-btn" type="button" class="btn btn-primary">تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end project 1-->
+                        <!--start project 2-->
+                        <div class=" col-lg-6 col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
+                            <div class="proj">
+                                <div class="proj-out">
+                                    <div class="proj-content">
+                                        <h3>ساعة من الكود</h3>
+                                        <p class="lead">ساعة من الكود هو إمتداد لمبادرة عالمية تقوم برعايتها مؤسسة <a href="http://www.code.org">Code.org</a> وتهدف لتوضيح وتبسيط المفاهيم المتعلقة بعلوم الحاسب لغير المتخصصين. المشروع يتكون من عدد من الفعاليات التي يتم ترتيبها والقيام بها على أرض الواقع في العديد من الأماكن التي يمكننا الوصول لها. يتكون المشروع من عدة محاور:</p>
+                                        <ul class="pro-list">
+                                            <li><i class="fa fa-check-circle fa-1x"></i> اختيار أماكن لم يسبق أن تم زيارتها لإقامة الفعالية</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> تجهيز وتحديث المحتوى الخاص بالفعالية</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> تجهيز الإجرائات اللازمة لترتيب الحضور</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> التفاعل مع الحضور وتقديم المساعدات الممكنة</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> إتاحة الفرصة للحضور بممارسة البرمجة لمدة ساعة من خلال الألعاب التعليمية</li>
+                                        </ul> 
+                                    </div>
+                                    <div class="pro-btns">
+                                        <a href="#" class="btn btn-primary">انضم الان</a>
+                                        <button id="new-modal2-btn" type="button" class="btn btn-primary">تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end project 2-->
+                        <!--start project 3-->
+                        <div class=" col-lg-6 col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
+                            <div class="proj">
+                                <div class="proj-out">
+                                    <div class="proj-content">
+                                        <h3>ساعة من المعرفة</h3>
+                                        <p class="lead">ساعة من المعرفة هي فكرة لم تدخل حيز التنفيذ بعد. الفكرة هي امتداد لفكرة ساعة من الكود، ولكن نطمح لإستبدال الكود بمجالات معرفية أخرى، يكون فيها المحتوى المقدم دليلاً سريعاً وشاملاً للمجال وأفكاره وأهم المحطات التاريخية به. مع وجود بعض النشاطات التي يقوم بها الحضور تتعلق بالمجال. </p>
+                                    </div>
+                                    <div class="pro-btns">
+                                        <a href="#" class="btn btn-primary" disabled>انضم الان</a>
+                                        <button id="new-modal3-btn" type="button" class="btn btn-primary" disabled>تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end project 3-->
+                        <!--start project 4-->
+                        <div class=" col-lg-6 col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0">
+                            <div class="proj">
+                                <div class="proj-out">
+                                    <div class="proj-content">
+                                        <h3>الكتاب المُلخَّص</h3>
+                                        <p class="lead">الكتاب المُلخَّص هو مشروع يتيح تقديم محتوى الكتب القيّمة بشكل مبسط ومختصر أو في شكل اقتباسات لأهم الجزئيات من الكتاب. يهدف المشروع لإتاحة فرصة للإطلاع على المزيد من الأفكار والأراء والمعلومات من مختلف المدارس العلمية والفكرية، ما يتيح بدوره فرصة على إثراء الحصيلة المعرفية لدى القارئ والمُعِّد على حد سواء. وللمشروع عدة محاور:</p>
+                                        <ul class="pro-list">
+                                            <li><i class="fa fa-check-circle fa-1x"></i> اختيار المواضيع المعرفية الشيّقة</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> البحث عن أعلام المجال المعرفي ومؤلفاتهم</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> دراسة أجزاء من المؤلفات وتلخيصها أو اقتباس المهم منها</li>
+                                            <li><i class="fa fa-check-circle fa-1x"></i> التجهيز للنشر</li>
+                                        </ul> 
+                                    </div>
+                                    <div class="pro-btns">
+                                        <a href="#" class="btn btn-primary">انضم الان</a> 
+                                        <button id="new-modal4-btn" type="button" class="btn btn-primary">إحصائيات</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end project 4-->
+                    </div>
+                </div>
+            </section>
+            <!-- start modals -->
+            <div id="new-modal1" class="new-modal">
+                <div class="new-modal-head text-center">
+                    <i class="fa fa-chevron-left back-btn" aria-hidden="true"></i>
+                    <p>5 معرفة</p>
+                </div>
+                <div class="new-modal-body" style="padding: 15px;">
+                    <p>
+                    	هو محور مشاريعنا، عبارة عن فيديو أو مجموعة فيديوهات يتم اعدادها وتقديمها من جهود المتطوعين أو المساهمين (المتخصصين) وبعدين بيتم تجهيزها من خلالنا ونشرها ليكم. هدفها تقديم مبدأ أو نظرية أو معلومة بشكل مبسط ومسلي، وهدفها تخليك تعرف ليه احنا درسنا المبدأ ده أو النظرية دي أو ليه محتاجين ندرسها. وامتى المعرفة دي بتأثر علينا في حياتنا. 
+
+                	</p>
+                	<p>
+
+                    	هو مشروع on-line بالأساس. ولكن في بعض الأحيان ممكن الاعداد والتصوير يكون offline بالترتيب مع المتطوعين أو المساهمين.
+                	</p>
+                	<p>
+                    	هدفنا من المشروع اننا نقدر نقدم أكبر كم من المحتوى الناطق بالعربية الثري والهادف. بمجهودنا وبمساعدة المتخصصين والمتابعين لأي مجال من مجالات الدراسة.
+
+
+                    </p>
+                </div>
+            </div>
+            <div id="new-modal2" class="new-modal">
+                <div class="new-modal-head text-center">
+                    <i class="fa fa-chevron-left back-btn" aria-hidden="true"></i>
+                    <p>ساعة من الكود</p>
+                </div>
+                <div class="new-modal-body">
+                    <div dir="ltr" id="chart_div"></div>
+                </div>
+            </div>
+            <div id="new-modal3" class="new-modal">
+                <div class="new-modal-head text-center">
+                    <i class="fa fa-chevron-left back-btn" aria-hidden="true"></i>
+                    <p>ساعة من المعرفة</p>
+                </div>
+                <div class="new-modal-body">
+                    
+                </div>
+            </div>
+            <div id="new-modal4" class="new-modal">
+                <div class="new-modal-head text-center">
+                    <i class="fa fa-chevron-left back-btn" aria-hidden="true"></i>
+                    <p>الكتاب المُلخَّص</p>
+                </div>
+                <div class="new-modal-body" style="padding: 15px;">
+                    <p>
+                    	هو مشروع خاص بالمتطوعين يتم فيه تحديد مجال معرفي لكل شهر ويتم استعراض واقتباس وتلخيص أهم الأفكار والشخصيات في هذا المجال. من خلال المرور على أهم الكتابات والتدوينات في المكتبة العربية والعالمية أحياناً. 
+
+                	</p>
+                	<p>
+
+                    	هو مشروع on-line خاص بالمتطوعين في سيشا. يتم نشره للقراء والمتابعين على صفحات سيشا على وسائل التواصل الاجتماعي.
+                	</p>
+                	<p>
+                    	هدفنا من المشروع هو المساهمة في تكوين خلفية معرفية مناسبة للمتابعين عموماً والشباب العربي خصوصاً. المساعدة على عرض المزيد من الكتابات والأفكار المعرفية في شتى العلوم والمعارف.
+
+
+                    </p>
+                </div>
+            </div>
+            <!-- end modals -->
+            <!--end section projects-->
+        </div>
+        <!-- END who-us section -->
+      
+        <!-- START Members section -->
+        <div class = "tab-pane fade" id="members">
+        	
+            <!-- start board -->
+            <div class="container">
+                <div class="container">
+                    <h2 class="members-head-p">المتطوعون</h2>
+                </div>
+                <div class="row">
+                    <div class="board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/ibrahem.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/ibrahem3amer" target="_blank"><h1>إبراهيم عامر</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                    <div class="board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/hesham.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/hesham.elganainy.9" target="_blank"><h1> هشام عبد اللطيف</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة </p>
+                        </div>
+                    </div>
+                    <div class="board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/hamza.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/m7md.7mza" target="_blank"><h1>محمد حمزة</h1></a>
+                            <p>كلية الحاسابت والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                    <div class="board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/omar.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/omar.elhendawy.3" target="_blank"><h1>عمر الهنداوي</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                
+
+
+                
+                    <div class="board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/hammza.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/M.hamza23" target="_blank"><h1>محمد حمزة</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                    <div class="board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/yamani.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/ahmed.elyamani.7?fref=ufi" target="_blank"><h1>أحمد اليماني</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/khaled.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/profile.php?id=100006907302173" target="_blank"><h1>خالد علي</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/adham.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/adham.zezo1" target="_blank"><h1>أدهم عبد العزيز</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/bana.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/ahmed.elpna.1" target="_blank"><h1>أحمد البنا</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/giar.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/abdo.ahmed.735" target="_blank"><h1>عبد الرحمن الجيار</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/aya.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/profile.php?id=100002150838730" target="_blank"><h1>آية لطفي</h1></a>
+                            <p>كلية التجارة - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/halawa.jpg">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/architesian" target="_blank"><h1>محمد حلاوة</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 board-member-div">
+                        <div class="col-xs-12 col-sm-4 ">
+                            <div class="img-div col-xs-12 text-center">
+                                <img src="img/team/kholoud.png">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-8  ">
+                            <a href="https://www.facebook.com/profile.php?id=100004982028815" target="_blank"><h1>خلود عيسى</h1></a>
+                            <p>كلية الحاسبات والمعلومات - جامعة المنصورة</p>
+                        </div>
+                    </div>
+                
+                    
+                </div>
+            </div>
+            <!-- end board -->
+            <!-- start Volunteers -->
+            <div class="container">
+            	   <h2>المساهمون</h2>
+                <div class="row Volunteer-row">
+                    <div class="Volunteer-div col-xs-6 col-md-3 col-lg-2 ">
+                        <div class="col-xs-12">
+                            <img src="img/team/aziz.png">
+                        </div>
+                        <div class="col-xs-12">
+                            <p>أحمد عزيز</p>
+                        </div>
+                    </div>
+                    <div class="Volunteer-div col-xs-6 col-md-3 col-lg-2 ">
+                        <div class="col-xs-12">
+                            <img src="img/team/karim.png">
+                        </div>
+                        <div class="col-xs-12">
+                            <p>كريم الشاويش</p>
+                        </div>
+                    </div>
+                    <div class="Volunteer-div col-xs-6 col-md-3 col-lg-2 ">
+                        <div class="col-xs-12">
+                            <img src="img/team/ahmad.png">
+                        </div>
+                        <div class="col-xs-12">
+                            <p>أحمد عادل</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- end Volunteers -->
+        </div>
+        <!-- END Members section -->
+        
+        
+        <!-- START Hour Of Code section -->
+        <div class = "tab-pane fade" id="hour">
+    <!-- start map section -->
+            <section class="map">
+                <div class="container-fluid">
+                    <div class="row parent-div">
+                        <div class="col-xs-12 col-md-10 col-md-offset-1">
+                            <div class="row">
+                                <div class="col-xs-12 child-div-1 eng">
+                                   Hour of code
+                                </div>
+                                <div  class="col-xs-12 col-md-6 child-div-2" >
+                                    <div class="hidden-md hidden-lg col-xs-12 description_style">
+                                        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.
+        إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.</p>
+                                    </div>
+                                    <div id="map"></div>
+                                </div>
+                                    <script src="js/map.js"></script>
+                                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkLlHLh6XVYI6Qq5vxi_rmMmsB2MSFEGM&callback=myMap"></script>
+                                <div class="col-xs-12 col-md-6 child-div-3">
+                                    <div class="hidden-xs hidden-sm col-md-12 description_style">
+                                        <p>ساعة من الكود هي امتداد لفعالية ساعة من الكود العالمية التي تنظمها مؤسسة code.org والتي تحمل على عاتقها مهمة نشر وتسهيل علوم الحاسب للجميع. ﻷن علوم الحاسب هي كالقراءة والكتابة في المستقبل، يجب على كل شخص أن يتعلم كيف تعمل تلك الحواسيب. وكيف أنها استطاعت تغيير وجهة العالم وإعادة حساباته. الفعالية الرئيسية موجهة لطلاب المدارس بشكل أساسي، لكن نقدمها نحن لجميع المراحل   والفئات العمرية. ﻷننا نعي جيداً أننا نعاني مشكلة في استخدام تلك الحواسيب بشكل سليم. نقوم بإعداد مقدمة نظرية بسيطة تشمل: تاريخ الكمبيوتر وأهم المحطات التاريخية لتطوره - لماذا نحتاج إلى لغات البرمجة - ماهي الخوارزميات ولماذا نحتاجها؟ - نشاط: قم بإعطاء الأوامر لصديقك ليرسم أحد الأشكال - آلية عمل البرامج: المدخلات، المعالجة، المخرجات. نهدف من خلال تلك المقدمة أن نحيط الحضور بخلفية مناسبة لإستعياب المفاهيم الأساسية التي تكوّن علوم الحاسب. بعد ذلك ننتقل إلى الفعالية الرئيسية وهي ساعة من الكود، حيث نقوم باستخدام لعبة "Mine Craft" المكوّنة من 12 مستوى يهدف كل مستوى لتعليم الشخص مبدئ محدد من المبادئ المستخدمة في كتابة البرمجيات. بعد ذلك نقدم للحضور فقرة للإستقبال أسئلتهم حول ما تم توضيحه.</p>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <table class="table text-center">
+                                            <thead>
+                                                <tr class="success">
+                                                    <th>#</th>
+                                                    <th>المكان</th>
+                                                    <th>التاريخ</th>
+                                                    <th>الوقت</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">١</th>
+                                                    <td>المنصوره</td>
+                                                    <td>٢٨ نوفمبر 2016</td>
+                                                    <td>١٢ مساءً</td>
+                                                </tr>
+                                                <tr class="active">
+                                                    <th scope="row">2</th>
+                                                    <td>كفر الشيخ</td>
+                                                    <td> ٢۹  نوفمبر 2016</td>
+                                                    <td>١ مساءً</td>
+                                                </tr>
+                                                <tr class="active">
+                                                    <th scope="row">3</th>
+                                                    <td>كفر الشيخ</td>
+                                                    <td> ٢۹  نوفمبر 2016</td>
+                                                    <td>3 مساءً</td>
+                                                </tr>
+                                                <tr class="active">
+                                                    <th scope="row">4</th>
+                                                    <td>الإسكندرية</td>
+                                                    <td> 4  مارس  2017</td>
+                                                    <td>١ مساءً</td>
+                                                </tr>
+                                                <tr class="active">
+                                                    <th scope="row">5</th>
+                                                    <td>الزقازيق</td>
+                                                    <td> 18  مارس  2017</td>
+                                                    <td>١ مساءً</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 alert alert-warning alert-host" role="alert">
+                                    <div class="row text-center">
+                                       <i class="fa fa-bell-o fa-2x" aria-hidden="true"></i> <strong class="eng">استضف Hour of code</strong><br>
+                                        <p class="eng">  نهدف للوصول لجميع الأماكن المتاحة والمناسبة، يمكنك التواصل معنا لترتيب فعالية في منطقتك. سنقوم بإرسال فريق عمل للقيام بالفعالية، أو يمكننا تدريبك على القيام بالفعالية وتزويدك بالمواد التعليمية اللازمة. </p>
+                                    </div>
+                                    <div class="text-center">    
+                                        <span>01013164085</span> <i class="fa fa-phone fa-1x" aria-hidden="true"></i><br>
+                                        <span>hoc@sesha.co</span> <i class="fa fa-envelope"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- END Hour Of Code section -->
+        
+        <!-- START Next Events section -->
+        <div class = "tab-pane fade" id="next">
+                <!--start Model event 1-->
+            <div id="event1_model" class="modal fade bs-example-modal-lg" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header text-center">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title eng">البحث عن مساهمين</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="content1">
+                                <div class="content1-inner">
+                                  <!-- Nav tabs -->
+
+                                  <!-- Tab panes -->
+                                  <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="arabic-model1">
+                                       <p style="line-height: 2">
+                                       	من ضمن مشاريع سيشا اللي بنشتغل عليها حالياً مشروع "5 معرفة". وهو مشروع يهدف لتوفير محتوى عربي هادف في العديد من مجالات العلوم الاجتماعية والإنسانية. المحتوى بيكون على شكل فيديوهات معرفية قصيرة، كل فيديو بيتكلم عن قضية أو موضوع أو نظرية وبيعرضها لغير المتخصصين بشكل مبسط. حالياً احنا بنجهز أكتر من محتوى في أكتر من مجال. ومحتاجين ترشحيات لمتطوعين يساعدونا في بناء المحتوى في عدد من المجالات المقترحة. ياريت تساعدونا في أي نقطة من النقط دي:
+                                       	<br />
+1- ممكن تكتبلنا محتوى لفيديو واحد أو مجموعة فيديوهات بتناقش أساسيات أو مفاهيم متعلقة بالمجال بتاعك.
+<br />
+2- ممكن تعمل النقطة رقم 1 وتقدم المتحوى ده (تسجل فيديوهات).
+<br />
+3- ممكن تسجل بياناتك معانا عشان نبعتلك المحتوى المتعلق بمجالك تراجعه وتديلنا رأيك (peer review).
+<br />
+4- ممكن تساعدنا اننا نوصل لناس يقدروا يساعدونا في أول 3 نقط.
+<br />
+<br />
+
+تقدر تساعدنا دلوقت وتقوم بدورك في بناء المحتوى العربي المناسب من خلال استكمالك للفورم ده: <a href="https://goo.gl/forms/RTSLtlajX4adhUUu2"> هنا </a>
+
+ياريت تبعتوا الفورم لأي حد يقدر يساعدنا، شكراً ليكم مقدماً وفي انتظار مشاركتكم.
+                                       </p> 
+                                  	</div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- end Model event 1 -->
+
+        <div class="container-fluid">
+            <div class="row gray_bg">
+                <div class="col-xs-12">
+                    <h1 class="text_style_h1">البحث عن مساهمين</h1>
+                </div>
+                <div class="col-xs-12">
+                    <div class="col-xs-12 col-md-2 col-md-offset-2 text-center">
+                        <img class="img_style" src="img/pic1.jpg">
+                    </div>
+                    <div class="col-xs-12 col-md-6 ">
+                        <div class="col-xs-12">
+                            <p class="text_style_p">من ضمن مشاريع سيشا اللي بنشتغل عليها حالياً مشروع "5 معرفة". وهو مشروع يهدف لتوفير محتوى عربي هادف في العديد من مجالات العلوم الاجتماعية والإنسانية.</p>
+                        </div>
+                        <div class="col-xs-12 text-center">
+                            <p class="location-date-style">اضغط للمزيد</p>
+                        </div>
+                        <div class="col-xs-12 text-center">
+                            <i id="event1_bt" class="fa fa-chevron-circle-down fa-3x btn more-icon" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- END Next Events section -->
+    </div>
+    
+    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+<script>
+        new WOW().init();
+        /*start text us bt model */
+        $(document).ready(function(){
+            $('#event1_bt').click(function(){
+                $('#event1_model').modal('toggle');
+            });
+            $('#event2_bt').click(function(){
+                $('#event2_model').modal('toggle');
+            });
+            $('#event3_bt').click(function(){
+                $('#event3_model').modal('toggle');
+            });
+            
+        });
+        /*end text us bt model */
+    </script>
+    <!------------- start NEXT SECTION model script ------------------->
+    <script>
+        $(".control").click(function(){
+            if($(this).next().css("width") == "0px"){
+                $(this).next().css("display","inline-block");
+                $(this).next().animate({width:$(this).parent().width()-51},500);
+                
+                $(this).children().removeClass("fa-bar-chart").addClass("fa-arrow-left");
+                
+                $(this).prev().animate({width:"0%"},500,function(){
+                    $(this).css("display","none");
+                });
+            }
+            else if($(this).prev().css("width") == "0px"){
+                $(this).prev().css("display","inline-block");
+                $(this).prev().animate({width:$(this).parent().width()-51},500);
+                
+                $(this).children().removeClass("fa-arrow-left").addClass("fa-bar-chart");
+                
+                $(this).next().animate({width:"0%"},500,function(){
+                    $(this).css("display","none");
+                });
+            }
+            
+        });
+    </script>
+    <script>
+    //new modals in about us tab
+        //move out all modals
+        $(".back-btn").click(function(){
+            $(this).parent().parent().animate({left:"-90%"},500,function(){
+                $(this).css("visibility","hidden");
+            });
+        });
+        //move in modal 4
+        $("#new-modal4-btn").click(function(){
+            $("#new-modal4").css("visibility","visible");
+            $("#new-modal4").animate({left:"0px"},500);
+        });
+        //move in modal 3
+        $("#new-modal3-btn").click(function(){
+            $("#new-modal3").css("visibility","visible");
+            $("#new-modal3").animate({left:"0px"},500);
+        });
+        //move in modal 2
+        $("#new-modal2-btn").click(function(){
+            $("#new-modal2").css("visibility","visible");
+            $("#new-modal2").animate({left:"0px"},500);
+        });
+        //move in modal 1
+        $("#new-modal1-btn").click(function(){
+            $("#new-modal1").css("visibility","visible");
+            $("#new-modal1").animate({left:"0px"},500);
+        });
+    </script>
+    <!------------- end NEXT SECTION model script ------------------->
+</body>
+</html>
